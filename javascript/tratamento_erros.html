@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tratamento de Erros</title>
+
+    <script>
+
+        // Netflix
+
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'Fullmetal Alchemist'
+        video[1]['categoria'] = 'Anime'
+
+        function getvideo(video){
+
+            try{  // O try tenta executar um código que possivelmente dará erro
+            // lógica
+            // http
+            console.log(video[0]['nome'])
+
+            } catch(erro){ // O catch pega o erro que atrapalharia a execução do código, trata ele para que fique oculto e não interromper a ação. Passando direto ao próximo item.
+                tratarErro(erro)
+                console.log('Catch - gora sim podemos tratar esse erro!')
+                throw new Error('Houve um erro mas não se preocupe, estamos trabalhando nisso agora!')
+
+
+            } finally{  // O finally finaliza essa tentativa de execução do código se ele funcionar ou não.                
+            console.log('Finnaly - Sempre passa por aqui (try/catch)')
+            }    
+
+            console.log('A aplicação não morreu!')
+
+        }
+
+        function tratarErro(e){ // Esse (e) seria o erro.
+        // Lógica pra registrar erro no servidor. Essa lógica pegaria o erro gerado pela aplicação ou site e a equipe de desenvolvimento iria no erro e consertaria.
+        console.log(e)
+        }
+
+        getvideo(video)
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

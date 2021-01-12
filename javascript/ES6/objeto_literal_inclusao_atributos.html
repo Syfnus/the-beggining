@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Objeto Literal Melhorias - Inclusão de atributos em Objetos Literais</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	let pessoa = {
+		nome: 'Maria',
+		idade: 25
+	}
+
+	console.log(pessoa)
+
+	// Em algum momento foi necessário no código incluir mais um atributo à Maria.
+	//Então se pega a variável e adicionando '. + atributo extra', 
+	// inclui-se + atributos.
+
+	pessoa.sexo = 'Feminino' // Atributo extra precisa de '=' para ganhar valor
+
+	// Pede-se console.log para confirmar a inclusão de atributo.
+	console.log(pessoa)
+
+
+	// O mesmo valor para atribuir funções à Variável
+	// Nesse caso foi usado a notação de Arrow Function para definir a função que foi associada como valor do atributo 'dizerOi' adicionado ao Objeto 'pessoa'
+
+	pessoa.dizerOi = () => console.log('Olá, tudo bem?')
+
+	// Novamente chama-se a função com o '. + função' após a variável, incluindo o atributo.
+
+	pessoa.dizerOi()
+
+	</script>
+	</head>
+	<body>
+
+	</body>
+	</html>

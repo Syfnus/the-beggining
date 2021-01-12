@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Funções Callback</title>
+    <script>
+
+        function exibirArtigo (id, callbackSucesso, callbackErro){
+        // lógica: Recuperar o id via requisição http
+        if (true){            
+            callbackSucesso('Funções de Callback em JS', 'Funções de Callback são muito utilizadas...')
+      } else {
+        callbackErro(' Erro ao recuperar os dados')
+      }
+    }
+
+        // Wrapper - encapsular as funções numa variável no fim do processo.
+
+        // São funções Void ambas, callbackSucesso e callbackErro, sem retorno.
+
+        // Impressão de callbackSucesso 
+
+        var callbackSucesso = function(titulo, descricao){  
+        document.write('<h1>' + titulo + '</h1>')  
+        document.write('<hr />')
+        document.write('<p>' + descricao + '</p>')                             
+                                                                          
+        }                                                                 
+         
+        // // Impressão de callbackErro
+
+        var callbackErro = function(erro){
+        document.write('<p><b>Erro:</b>' + erro + '</p>')                                     
+       
+        }                                                                 
+        
+        exibirArtigo(1, callbackSucesso, callbackErro)
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

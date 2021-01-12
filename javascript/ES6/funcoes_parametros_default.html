@@ -1,0 +1,25 @@
+<html>
+	<head>
+	<title> Template String</title>
+
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Estou dando os parâmetros default na assinatura da função, dando a cada elemento suas caracerísticas ou parâmetros e na ordem que aparecem na String a ser concatenada com o parâmetro,eles são executados
+
+	function contarUmaHistoria(personagem = 'Scooby', atividade = 'correr no parque', nome_dono = 'Tiago') {
+		document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono}, e eles viveram felizes para sempre.`)
+	}
+
+
+ 	// Aqui estou chamando a função, mas se eu quiser sobrepor os parâmetros que pus na assinatura da função, basta eu pôr na ordem de aparecimento aqui no parâmetro. Se eu quiser manter 1 dos parâmetros da assinatura da função, basta eu pôr undefined no lugar do parâmetro e manter o anterior, esse não será sobreposto.
+ 	
+	contarUmaHistoria('Luna', 'rolar na terra', undefined)
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

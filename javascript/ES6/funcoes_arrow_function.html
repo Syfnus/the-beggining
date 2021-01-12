@@ -1,0 +1,64 @@
+<html>
+	<head>
+	<title> Arrow Function () => </title>
+
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Arrow Function é declarar uma Função usando apenas () =>, a função abaixo será substituída por esse modelo mais enxuto e menos verboso. E se houver apenas 1 parâmetro pra ser declarado nessa função ela pode ser escrita sem os (), apenas assim: x =>
+
+
+ /* let quadrado = function(x = 5){
+		return x * x
+	} 
+
+	// Com apenas 1 parâmetro a ser declarado, não é necessário utilizar os (), passando de 1 parâmetro, volta-se a usar () para acomodá-los na função.
+	let quadrado = x => {
+		return x * x
+	}
+
+	// Mais 1 detalhe: Se houver apenas 1 instrução de Retorno usando o "return", não é necessário utilizar nem {} e nem return, apenas deixar a instrução após => 
+
+	//Recurso chamado Return Implícito em função anônima, está ali mas invisível 
+
+	let quadrado = x => x * x  
+
+	document.write( quadrado(3) ) */
+
+	// Função Par ou Ímpar
+
+/*	let parOuImpar = function(numero){
+
+		if(numero % 2 === 0){
+			return 'Par'
+		}else {
+			return 'Ímpar'
+		}
+	} 	
+
+	// Arrow Function dela
+
+	let parOuImpar = numero => { //O Recurso chamado Return Implícito em função não pode ser usado aqui porque temos mais de 1 instrução a ser executada.
+
+		if(numero % 2 === 0){
+			return 'Par'
+		}else {
+			return 'Ímpar'
+		}
+	}
+
+	
+
+     // Recurso Return Implícito e if ternário! O if substituirá o return e todas as intruções, no caso 3: divisão com checagem de Par ou Ímpar, if e else, usa-se apenas os símbolos ? pra fim de função e : (ou) para if : else. */
+	
+	let parOuImpar = numero => numero % 2 === 0 ? 'Par' : 'Ímpar'
+
+	document.write(parOuImpar(8))
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

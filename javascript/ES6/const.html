@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title> Constantes - const</title>
+
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Constantes ou const são variáveis que não sofrem alterações de valor ou hoisting de escopo, sendo seguras pra armazenar links e senhas de algumas coisas. O Java Script não permite essa mutação de "const". 
+
+
+		const SERIE	= 'Friends'
+
+		function x() {
+			const SERIE = 'The Walking Dead'
+			console.log('Fora da função:' + SERIE)
+		}
+
+		x()
+
+		console.log('Escopo Global:' + SERIE)
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

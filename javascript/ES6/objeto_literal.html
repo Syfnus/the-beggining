@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Objetos Literais</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Objeto criado com base em class
+
+	class Produto {
+		constructor(descricao, preco){
+		this.descricao = descricao
+		this.preco = preco
+		}
+		verDescricao() {
+			console.log (`${this.descricao} por apenas ${this.preco}`)
+
+		}
+	}
+
+	let produto = new Produto('Notebook', 2200)
+	produto.verDescricao()
+
+
+// Objeto criado com base em um Produto Literal, que é um objeto descritivo que combina pares de nomes e valores numéricos, strings, funções, arrays e outros objetos literais. 
+	let produtoLiteral = {
+		descricao: 'Geladeira',
+		preco: 1800,
+		verDescricao: function(){
+		console.log (`${this.descricao} por apenas ${this.preco}`)
+
+		}
+	}
+
+	produtoLiteral.verDescricao()
+
+	</script>
+	</head>
+	<body>
+
+	
+		<div id="output"></div>
+	</body>
+	</html>

@@ -1,0 +1,69 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>Laços de Repetição - For In</title>
+
+		
+     <script>
+
+      // Ele recupera a posição gerada no índice da variável, atua somente sobre valores numéricos partindo de zero, retorna a chave de cada posição: 0, 1, 2, 3
+
+      // var listadeConvidados =['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+      // var listaFuncionarios = ['Viviane', 'Rosangela', 'Miguel', 'Lucas', 'Fernanda']
+
+      /* Função de callback
+      listaFuncionarios.forEach(function(valor, indice){
+       } */
+
+       var listaFuncionarios = Array()
+
+       // ìndices não numéricos normais como strings e termos não serão contados nem lidos no índice e length do Array.
+
+       listaFuncionarios['x'] = 'Viviane'
+       listaFuncionarios[false] = 'Rosangela'
+       listaFuncionarios[3] = 'Miguel'
+       listaFuncionarios[27] = 'Lucas'
+       listaFuncionarios[-12] = 'Fernanda'
+
+       var f = function(valor, indice){
+        console.log(valor, indice)
+
+       }
+
+       listaFuncionarios.forEach(f)  // Técnica e Wrapper - Fuñção encapsulada no forEach
+
+        
+
+      
+
+
+      
+
+   /* console.log(listaFuncionarios)
+      document.write(listaFuncionarios[3])
+
+      listaFuncionarios.forEach(function(valor, indice, array) {
+
+        // Lógica executará cada índice do Array até não achar mais índice no Array e chegar à posição undefined (inexistente)
+
+        console.log('indice: ' + indice + ' | valor: ' + valor)
+
+        if (valor == 'Lucas'){
+          array[indice] = 'Um novo valor'
+        }
+
+      })
+
+      console.log(listaFuncionarios)
+      document.write('<br />' + listaFuncionarios[3]) */
+
+
+
+    </script>  
+
+	</head>
+  <body>
+  </body>	
+
+</html>

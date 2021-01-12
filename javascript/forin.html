@@ -1,0 +1,34 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>Laços de Repetição - For In</title>
+
+		
+     <script>
+
+      // Ele recupera a posição gerada no índice da variável, a chave de cada posição: 0, 1, 2, 3
+
+      // var listadeConvidados =['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+      var listadeConvidados = Array()
+
+      listadeConvidados['a'] = 'Jorge'
+      listadeConvidados[18] = 'Jamilton'
+      listadeConvidados['zebra'] = 'José' 
+      listadeConvidados[-1] = 'Ana'
+      listadeConvidados[true] = 'Maria'
+
+      console.log(listadeConvidados)
+
+      for(var x in listadeConvidados ){
+        console.log('Índice ' + x + ' valor ' + listadeConvidados[x])
+      }
+
+
+    </script>  
+
+	</head>
+  <body>
+  </body>	
+
+</html>

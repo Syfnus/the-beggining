@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+        /* Tipo de Funções */
+
+        // Void = Efetua a lógica mas não fornece nemhum tipo de retorno pra quem fez a "chamada" ou o cálculo, sem resultado visível. Não haverá o item "return=" nessa função. Se eu colocar "document.write()" aparecerá no browser mas ainda será Void, pois não tem "return=", é uma função apenas de processamento.
+
+
+
+        // Retorno = Essa retorna o resultado no fim da função com o item "return=".
+
+
+        /* Tipo Void
+
+        function calcularAreaTerreno (largura, comprimento){
+
+            //lógica
+            var area = largura * comprimento
+
+            document.write('O terreno possui ' + area + ' metros quadrados.')
+        }
+
+        calcularAreaTerreno (15, 25) 
+
+
+        // Tipo Return
+
+        function calcularAreaTerreno (largura, comprimento){
+
+            //lógica
+            var area = largura * comprimento
+
+            return area
+        }
+
+        var largura = prompt('Digite a largura do terreno em metros: ')
+        var comprimento = prompt('Digite o comprimento do terreno em metros: ')
+
+        var area = calcularAreaTerreno(largura, comprimento)
+
+        document.write('O terreno possui ' + area + ' metros quadrados. ') */
+
+        function soma (a, b) {
+            // b = b === undefined ? 0 : b
+            return a + b
+        }
+
+        console.log(soma(7 , 7))
+        console.log(soma(7 , 7, 9, 15)) // Desconsidera parâmetros adicionais no console.log, apenas se for colocado em function e return que eles serão adicionados.        
+        console.log(soma(7))
+        console.log(soma())
+
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

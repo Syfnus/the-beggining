@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Eventos de Formulários</title>
+    <script>
+
+    </script>
+
+
+</head>,
+
+	<!-- Eventos de Formulários-->
+
+	<!-- Os Eventos de Formulários ocorrem dentro do <body> ao ser criado um formulário  com <input>, dentro do <input onfocus="evento desejado">  se adiciona o evento desejado a função.
+	Podem ser usados em conjunto dento do formulário.-->
+
+	<!-- onfocus="console.log('teste') - Ativado pelo clique do mouse sobre o formulário.-->
+
+	<!-- onblur="console.log('teste') - Ativado quando se clica fora do formulário ou se sai dele com Tab por exemplo.-->   
+
+
+	<!-- onchange="console.log('Estado foi modificado') - Ativado quando se clica num selecionador de opções<select>, ao escolher uma das opções o estado será mudado e o evento disparado.-->       
+
+<body>
+	<input onfocus="console.log('Recebeu o foco')" onblur="console.log('Perdeu o foco')" type="text">
+
+	<select onchange="console.log('Estado foi modificado')">
+		<option>--Selecione--</option>
+		<option value="1">--Primeira Opção--</option>
+		<option value="2">--Segunda Opção--</option>
+	</select>
+
+</body>
+</html>

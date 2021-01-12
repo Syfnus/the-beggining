@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title> Orientação à Objetos  - Pilar da Herança</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Class Pai
+
+	class Animal{
+		constructor(){
+			this.cor = ''
+			this.tamanho = null
+			this.peso = null
+		}
+		dormir(){
+		 	console.log('Dormir')
+		 }
+	}
+
+
+ 	// Classes filhas ou subclasses: quando eu uso a palavra "extends" após o nome da class e digo qual é a Class Pai, a herança de atributos e métodos acontece.
+
+	class Cachorro extends Animal {
+		constructor(){
+			// Atributos
+
+/*			Será herdado da Class Pai
+			this.cor = 'Branco e marrom'
+			this.tamanho = 30 */
+			super()
+			this.orelhas = 'Grandes e caídas'
+		}
+
+		// Métodos
+
+		correr(){
+			console.log('Correr')
+		}
+
+	/*	Será herdado da Class Pai
+		dormir(){
+			console.log('Dormir')
+		} */
+
+		rosnar(){
+			console.log('Rosnar')
+		}
+	}
+
+
+	class Passaro extends Animal{
+		constructor(){
+			// Atributos
+
+	/*		Será herdado da Class Pai
+			this.cor = 'Branco e marrom'
+			this.tamanho = 10 */
+			super()
+			this.bico = 'Curto'
+		}
+		 // Métodos
+
+		 voar(){
+		 	console.log('Voar')
+		 }
+/*		Será herdado da Class Pai
+		 dormir(){
+		 	console.log('Dormir')
+		 } */
+		}
+
+		// Quando eu atribuo o extends à Passaro, ocorre uma cascata de herança, Passaro recebe Métodos e Atributos de Animal e Papagaio recebe das 2 classes por herança.
+
+		class Papagaio extends Passaro{
+			constructor(){
+				super()
+		/*		Herança de Passaro
+				this.bico = 'Médio' */
+				this.sabeFalar = true
+			}
+
+			falar(){
+				console.log('Falar')
+			}
+		}
+
+		let cachorro = new Cachorro()
+		let passaro = new Passaro()
+		let papagaio = new Papagaio()
+		/*
+		cachorro.dormir()
+		passaro.dormir()
+		papagaio.falar()
+		papagaio.dormir()
+		papagaio.voar() */
+
+		console.log(cachorro)
+		console.log(passaro)
+		console.log(papagaio)
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

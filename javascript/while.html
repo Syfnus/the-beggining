@@ -1,0 +1,45 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>Estrutura de Repetição While</title>
+
+		
+     <script>
+
+      /* O while é um looping de repetição que dada a condição será executado até que encontre o comando if seguido de break, freiando no ponto desejado. Ele será repetido até a condição do while ser atingida e retornar 'false', o valor após o pedido na condição, nesse caso 10 com o complemento de 1 unidade*/
+
+      var x = 1
+
+      document.write('início <br />')
+
+      
+      while(x <= 10) {
+
+      x++ // Já está sendo adicionado 1 à variável x = 1, então o fim será 11 e inciará com 2! Passou pelo 5 direto pq ele seria incrementado +1 valendo 6, então não foi achado. 
+
+      if(x === 5){
+        continue
+     // o continue irá continuar após atingir a condição pedida no 'if()' e continuará infinitamente, porém, se no while houver algo que trave esse looping infinito, vai parar
+      }
+
+
+      document.write(x + '<br />')
+
+      }
+        // Instrução if e break ao atingir a condição
+
+        /*if(x === 5) {
+          break
+        }
+
+      x++ */
+    
+
+    document.write('fim  <br />')
+
+    </script>     
+	</head>
+  <body>
+  </body>	
+
+</html>

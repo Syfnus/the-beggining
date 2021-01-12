@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Escopo de Variáveis</title>
+    <script>
+
+        /* 3 Escopos: 
+
+        Global - Todo o conteúdo dentro do <script> < /script>.
+        Função  - Escopo dentro da função em si, tudo dentro dos {}. 
+        Bloco - Escopo dos comandos como If, Else, switch     */ 
+
+        // Escopo Global
+
+        var serie = 'Friends'
+
+        // Escopo de Bloco tem acesso ao escopo Global
+
+        if (true) {
+            var serie2 = 'Game of Thrones' // Hoisting = Elevação de declaração de variável, somente no escopo de Bloco. Se esse bloco "If" por exemplo estiver dentro da function, não estará mais ligado ao escopo Global e não visualizará os itens do mesmo.
+
+            document.write(serie)
+        }
+
+        document.write(serie2)
+
+        document.write('<br />')
+
+        // Escopo de Função tem acesso à variáveis do escopo Global, mas variáveis declaradas dentro da função não tem acesso ao escopo global.
+
+        function x() {
+            var serie3 = 'The Walking Dead'
+            document.write(serie)
+            document.write(serie2)
+        }
+
+        x()
+
+        document.write('<br />')
+        document.write(serie3)
+
+
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

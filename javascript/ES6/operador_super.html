@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title> Operador Super</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Operador Super: O operador Super fornece acesso para o Método "constructor" da Classe Pai.Ele é sempre incluído dentro do "constructor" de classes filha ou subclasses, se a classe tem relação de herança com outra classe, essa classe filha precisa implementar o Super. Resumindo, se uma classe usa operador "extends" pra herdar algo na cascata, o operador Super tem que ser colocado dentro do "constructor" onde ficam os atributos da classe filha. O operador super sempre vem antes de "this.atributo".
+
+	// Class Pai
+
+	class Animal{
+		constructor(cor, tamanho, peso){
+			this.cor = cor
+			this.tamanho = tamanho
+			this.peso = peso
+		}
+		dormir(){
+		 	console.log('Dormir')
+		 }
+	}
+
+
+ 	// Classes filhas ou subclasses: quando eu uso a palavra "extends" após o nome da class e digo qual é a Class Pai, a herança de atributos e métodos acontece.
+
+	
+	class Passaro extends Animal{
+		constructor(bico, cor, tamanho, peso){
+			// Atributos
+
+	/*		Será herdado da Class Pai
+			this.cor = 'Branco e marrom'
+			this.tamanho = 10 */
+			super(cor, tamanho, peso)
+			this.bico = bico
+		}
+		 // Métodos
+
+		 voar(){
+		 	console.log('Voar')
+		 }
+/*		Será herdado da Class Pai
+		 dormir(){
+		 	console.log('Dormir')
+		 } */
+		}
+
+		// Quando eu atribuo o extends à Passaro, ocorre uma cascata de herança, Passaro recebe Métodos e Atributos de Animal e Papagaio recebe das 2 classes por herança.
+
+		class Papagaio extends Passaro{
+			constructor(sabeFalar, cor, tamanho, peso){
+				super('Médio', cor, tamanho, peso)
+		/*		Herança de Passaro
+				this.bico = 'Médio' */
+				this.sabeFalar = sabeFalar
+			}
+
+			falar(){
+				console.log('Falar')
+			}
+		}
+
+		let papagaio = new Papagaio(true, 'verde', 25, 350)
+		console.log(papagaio)
+
+		let papagaio2 = new Papagaio(false, 'branco', 10, 80)
+		console.log(papagaio2)
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

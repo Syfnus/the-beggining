@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Funções - Parâmetros Variáveis</title>
+
+    <script>
+
+        /*function soma(a, b){
+            // b = === undefined ? 0 : b
+            return a + b
+        }
+
+        console.log(soma(7, 7))
+        console.log(soma(7, 7, 9, 15)) // Desconsidera os parâmetros adicionais
+        console.log(soma(7))
+        console.log(soma()) */
+
+        // Argumets - Não é um Array, é um Objeto,  mas tem índice e objetos declarados nesse índice que pode ser percorrido também como num Array. Além de executar a soma por exemplo de números declarados, quando encontra String ele concatena tratando como texto e não número, ele faz a diferenciação automática, coisa que o Array às vezes não faz.
+
+
+        function soma(){
+            var resultado = 0
+            for(var i in arguments){  // O forin percorre o Array dentro da função e retorna as posições.
+            resultado += arguments[i] // Aqui foram somados todos os parâmetros declarados.
+        }
+
+            return resultado
+        }
+
+        console.log(soma(7, 5, 3.2, 'Texto'))
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

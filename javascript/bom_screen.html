@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM - Screen</title>
+
+    <script>
+
+        // Os atributos Altura e Largura são representados baseados no potencial de tamanho que o browser pode alcançar, mesmo que a tela esteja diminuída ao máximo, eles mostram o quanto ela pode chegar, seu potencial total. É a área total onde os elementos HTML são renderizados (ativados).
+
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        /*document.write('Altura do navegador é: ' + altura + '<br />')
+        document.write('Largura do navegador é: ' + largura) */
+
+        if(largura < 500){
+            document.write('Lógica para impressão do menu versão mobile')
+        } else{
+            document.write('Lógica para impressão do menu versão web')
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

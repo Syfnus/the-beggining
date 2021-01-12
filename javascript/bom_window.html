@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM - Window</title>
+
+    <script>
+    var janela // Variável janela Pop-up
+
+    function abrirPopUp(){
+    // Janela Pop-Up atribuída ao método window.open.    
+    janela = window.open('http://www.google.com', 'nova_janela', 'width=200, height=100' )
+    }
+
+    function fecharPopUp(){
+        // Janela Pop-Up recuperada no método "janela.close()", close() é nativo de objetos que representam janelas.  
+        janela.close()
+    }
+
+
+    </script>
+</head>
+<body>
+    <button class="btn btn-warning" onclick="abrirPopUp()">Abrir janela</button>
+    <button onclick="fecharPopUp()">Fechar janela</button>
+    <button class="btn btn-warning" onclick="window.print()">Imprimir página</button>
+</body>
+</html>

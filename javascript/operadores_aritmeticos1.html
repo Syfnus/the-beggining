@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Operadores Aritméticos</title>
+
+
+
+    <script>
+
+        /*Precedência - Para que um valor numérico seja executado primeiro que uma string numa operação, basta colocar dentro de parênteses, sem a necessidade de usar parseInt(mudar pra Inteiro) uma string. A operação em parêntesessempre é executada primeiro na Matemática */
+
+    var num1 = prompt('Digite o valor de num1: ')
+    var num2 = prompt('Digite o valor de num2: ')
+
+
+    // Casting para que a soma seja realizada de forma correta e não concatenação
+
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
+
+
+    document.write('A soma entre ' + num1 + ' e ' + num2 + ' é: '  + (num1 + num2) + '<br/>')
+
+
+    document.write(' A subtração entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 - num2) + '<br/>')
+
+
+    document.write(' A multiplicação entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 * num2) + '<br/>')
+
+
+    document.write(' A divisão entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 / num2) + '<br/>')
+
+    document.write(' O módulo entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 % num2) + '<br/>')
+
+    /*document.write(' O incremento pré de ' + num1 + ' é: '+ (++num1) + '<br/>')
+    document.write(num1 + '<br/>')*/
+
+
+    document.write(' O incremento pós de ' + num1 + ' é: ' + (num1++) + '<br/>')
+    document.write(num1 + '<br/>')
+
+    /*document.write(' O decremento pós de ' + num1 + ' é: ' + (--num1) + '<br/>')
+    document.write(num1 + '<br/>')*/
+
+    document.write(' O decremento pós de ' + num1 + ' é: ' + (num1--) + '<br/>')
+    document.write(num1 + '<br/>')
+    
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

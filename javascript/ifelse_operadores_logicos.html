@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Casting de Tipos</title>
+
+
+
+    <script>
+      // Operadores lógicos: && (E), ||(ou), !(negação)
+
+      /* Operador && (E) - Se todos os resultados forem verdadeiros, o fim é "true", se um deles é "false", então toda a expressão será "false" no fim, indo pro else se houver texto indicando o resultado falso.*/
+
+      //true && true = true
+      //true && true && false = false
+ /*     if(2 == 2 && 3 >= 1 && 'a' == '') {
+        document.write('Verdadeiro')
+        } else {
+          document.write('Falso')
+
+        }*/
+
+        /* Operador ||(OU), se houver 1 resultado "true" na expressão, toda ela será verdadeira - true || true || false = true. 
+        Será falso se apenas todas elas forem falsas - false || false || false = false.*/
+
+        /* Operador !(negação), ele inverte o resultado da expressão em parenteses dentro do "if" - if(!(4 ==2)) = true 
+        mesmo que a expressão seja falsa, o log será de verdadeiro, e vice versa.*/
+
+        //false = true - if(!(4 ==2)) = true
+        //true = false - if(!(5 >= 2)) = false 
+
+ /*     if(!(5>= 2)) {
+        document.write('Verdadeiro')
+        } else {
+          document.write('Falso')
+        } */ 
+
+
+    var nota = prompt('Digite aqui a nota do aluno: ')
+    var faltas = prompt('Digite a quantidade de faltas: ')
+
+    var media = 7
+    var faltas_maximas = 15
+      
+    if (nota >= media && faltas <= faltas_maximas) {
+      document.write('Aprovado')
+
+    }  else {
+      document.write('Reprovado')
+    }    
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

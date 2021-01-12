@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Eventos Mouse</title>
+    <script>
+
+    	/* Eventos do Mouse em HTML DOM*/
+
+    	// Os eventos podem ser combinados, cada evento dispara uma função, aviso, execução de algo ou assim, usando o mesmo elemento na página. Nem todo evento está dicponível para todos os elementos html. Consultar a documentação antes de encodar.
+
+
+
+    	// onclick="" dispara um evento/função quando o mouse clica 1x no objeto.
+
+    	// ondblclick="" dispara um evento/função quando o mouse faz duplo clique no objeto.
+
+    	// onmouseup="" dispara um evento/função quando clica com o mouse sobre o objeto e depois solta o clique.
+
+    	// onmouseover="" dispara um evento/função quando o cursor do mouse entra na área do objeto html.
+
+    	// onmouseover="" dispara um evento/função quando o cursor do mouse sai na área do objeto html.
+
+
+
+
+    	function acao1(){
+    		alert('O elemento foi clicado.')
+    	}
+
+    	function acao2(){
+    		alert('O cursor do mouse deixou a região do elemento.')
+    	}
+
+    </script>
+
+
+</head>
+<body>
+    <div onclick="acao1()" onmouseout="acao2()" style="background: #ccc; height: 150px; width: 150px;"></div>
+
+    <p>Click the button to display the time.</p>
+
+<button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+<p id="demo"></p>
+   
+</body>
+</html>

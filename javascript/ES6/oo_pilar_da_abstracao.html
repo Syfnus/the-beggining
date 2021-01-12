@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title> Orientação à Objetos  - Pilar da Abstração</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+		// Class - Modelo do/Objeto
+
+		class ContaBancaria {
+			// Atributos do Objeto - agencia, numeroConta, saldo, limite
+			constructor(){
+				this.agencia = 1075
+				this.numeroConta = 123456789
+				this.saldo = 50
+				this.limite = 450
+			}
+			// Ações/Métodos do Objeto
+
+			depositar(valorDeposito){
+				this.saldo += valorDeposito  // Acrescenta valor
+			}
+
+			sacar(valorSaque){
+				this.saldo -= valorSaque  // Decrementa valor
+			}
+
+			consultarSaldo(){
+				return this.saldo
+
+			}
+		}
+
+		/* 
+		O "new" é o operador que indica pro interpretador do Java script que eu quero na prática transformar o modelo/classe acima em um objeto que possa ser utilizado dentro do meu código. A partir dessa Instância nós podemos recuperar os Atributos e Métodos do objeto. 
+		
+		Com o "new" eu cio uma Instância, gerando uma Entidade, nesse caso "ContaBancaria". O "x" ou "y" são a Identidade da Entidade ou Objeto. 
+
+		Então o operador "new" Instacia um Objeto com base num Modelo. 
+
+		A Classe não é o Objeto, ela é o Modelo que serve para a geração de vários Objetos se necessário dentro do nosso código. 
+		*/
+
+		let x = new ContaBancaria()
+		let y = new ContaBancaria()
+
+		// quando boto a Identidade do Objeto "x" uso o "." e o Método que quero consultar, eu retorno o método sobre o Objeto. Se eu pedir um console.log, aparecerá o retorno do Método "consultarSaldo" de ContaBancaria.
+
+		console.log(x.consultarSaldo())
+		x.depositar(450)
+		console.log(x.consultarSaldo())
+		x.sacar(200)
+		console.log(x.consultarSaldo())
+
+		console.log(y.consultarSaldo())
+
+
+
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

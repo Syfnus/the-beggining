@@ -1,0 +1,56 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>Array Ordenação</title>
+
+		
+     <script>
+
+      /* Método .sort() (ordenar) faz uma ordenação alfanumérica nos itens do Array. Se forem String (texto) a ordenação será feita corretamente, já que a ordenação alfabética é a padrão do .sort(). 
+      Se for numérico ou Strings de números, a função abaixo deverá ser usada:
+
+      Essa é a função pra números: 
+
+       function ordenaNumeros(a, b) {
+       return a - b
+
+
+
+      var lista_frutas = Array()
+
+      lista_frutas[0] = 'Maçã'
+      lista_frutas[1] = 'Uva'
+      lista_frutas[2] = 'Banana'
+      lista_frutas[3] = 'Morango'
+
+      console.log(lista_frutas.sort()) */
+
+      var lista_numeros = Array()
+
+      lista_numeros[0] = '12'
+      lista_numeros[1] = '40'
+      lista_numeros[2] = '3'
+      lista_numeros[3] = '7'
+      lista_numeros[4] = '19'
+      lista_numeros[5] = '1'
+
+      console.log(lista_numeros.sort(ordenaNumeros))
+
+      // Função padrão pro método .sort() pra ordenação de valores numéricos, ainda que estejam escritos em forma de Strings como no exemplo acima.
+
+      function ordenaNumeros(a, b) {
+        return a - b
+        // Se valor < 0 = a ordenado antes de b.
+        // Se valor > 0 = b ordenado antes de a.
+        // == a ordem é mantida.
+      }
+    
+      
+    
+      
+    </script>     
+	</head>
+  <body>
+  </body>	
+
+</html>

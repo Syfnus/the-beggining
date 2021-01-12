@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Objeto Literal Melhorias - Notação</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	let nome = 'Tiago'
+	let idade = 29
+	let sexo = 'Masculino'
+	let profissao = 'Programador'
+
+
+	let objeto = {
+		// Par: nome (Atributo)/valor
+		// nome: = Atributo / nome (após nome:) = valor
+		nome: nome,
+		idade: idade,
+		sexo: sexo,
+		profissao: profissao,
+		exibirResumo: function(){
+			console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}.`)
+		}
+	}
+
+	console.log(objeto)
+	objeto.exibirResumo()
+
+
+
+	// Melhorias do ES6
+
+	let objeto2 = {
+		// No ES6 nome: = nome variável / valor = valor variável, logo podemos deixar apenas 1 deles escritos se forem iguais nome/valor, tornando enxuto o código.
+
+		nome,
+		idade,
+		sexo,
+		profissao,
+		exibirResumo(){ // se eu retirar 'function' do fim a função deixa de ser anônima para adquirir o nome antes de funtion e o Java script interpreta normal. 
+			console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}.`)
+		}
+	}
+
+	console.log(objeto2)
+	objeto2.exibirResumo()
+
+	</script>
+	</head>
+	<body>
+
+	</body>
+	</html>

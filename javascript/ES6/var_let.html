@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title></title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<!-- Your custom script here -->
+
+	<script type="text/babel">
+
+
+	// VAR: O var faz Variável sofrer Hoisting (elevação de nível escopo) dentro do escopo, joga essa variável pra também ser acessada, chamada em outro nível acima de escopo como Função ou Global.
+
+	// 3 escopos: Global, Função e Bloco
+
+	// Escopo Função
+
+	/*var serie = 'Friends' // Variável Escopo Global é o objeto "Window" do Browser
+
+	function x() {
+
+		var serie = 'Game of Thrones' // Variável declarada dentro da Função, disponível no Escopo Função e Bloco
+
+
+		console.log('Função: ' + serie) // Variável Global no Escopo Função
+
+
+
+		// Escopo Bloco dentro da Função
+		if(true) {
+		console.log('bloco dentro da Função: ' + serie) // Variável da Função no Escopo Bloco dentro da Função.
+		}
+	}
+
+	x()
+
+	if(true) {
+	console.log('global: ' + serie) // Variável Global no Escopo Bloco
+			
+		}
+
+
+
+
+	// Escopo Função
+	function x() {
+		console.log('Variável de Bloco de Escopo Global chamada dentro da Função: ' + serie) // Variável declarada no Bloco após Função
+
+	// Escopo Bloco dentro da Função
+	if(true) {
+
+	// Uma variável declarada aqui dentro da Função é restrita à Função, não irá nunca pro escopo Global.
+	
+		}
+
+	}
+
+	
+	// Escopo Bloco Global fora de Função.
+
+	if(true) {
+		var serie = 'The Walking dead' 
+		// A engine do Javascript trata todas as variáveis declaradas com var como se fossem declaradas no topo do escopo de uma função (se colocadas dentro de uma), ou no topo do escopo global (se declaradas fora de uma função), independentemente de onde a declaração real ocorrer. Isso essencialmente é “hoisting”. Se eu declarar no Bloco ela sobe de nível de escopo = Função, Global. 
+
+		// Se eu chamar pra dentro do Bloco a Função após a declação da Variável, 
+		// então ela pode ser incorporada à Função criada que será chamada lá também!
+		x() 
+		console.log(serie)			
+		} 
+
+		console.log(serie) // Variável chamada no Escopo Global  
+
+
+
+		// LET: O let mantém a Variável dentro do escopo, não faz Hoisting (elevação de escopo), não joga essa variável pra também ser acessada em outro nível acima de escopo como Função ou Global.
+
+
+
+		if (true) {
+			let serie = 'Friends'			
+		}
+
+		console.log(serie) // Fora do escopo do Bloco!! Não será reconhecida!     
+
+
+		// VAR - Esse é um exemplo de uso do Var. Nesse código, o Var como faz Hoisting e tudo sobe 1 escopo, a variável dentro da função jogou "The Walking Dead" pra Escopo Global, o Bloco fora da função também, mas como a função SOBRESCREVEU o escopo Global com o Hoisting, apenas a String declarada na Função sobreviveu ao Hoisting que ocupou
+
+		var serie = 'Friends' GLOBAL
+		
+		// Escopo de bloco {} "fake" pra simular Função
+		{
+
+		 var serie = 'The Walking Dead'	
+		 console.log('Dentro do Bloco: ' + serie) BLOCO INTERNO
+		}
+
+		console.log('Fora do Bloco: ' +serie) BLOCO EXTERNO 
+
+
+		// LET - O let segura a variável dentro do escopo, então não sofre Hoisting, nada sai do seu lugar e sobrescreve o próximo escopo, elas se mantém, isso evita BUGS no código.
+
+
+		let serie = 'Friends' // GLOBAL
+		
+		// Escopo de bloco {} "fake" pra simular Função
+		{
+
+		 let serie = 'The Walking Dead'	
+		 console.log('Dentro do Bloco: ' + serie) // BLOCO INTERNO
+		}
+
+		console.log('Fora do Bloco: ' +serie) // BLOCO EXTERNO */ 
+
+
+
+
+
+
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>

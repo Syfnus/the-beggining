@@ -1,0 +1,40 @@
+<html>
+	<head>
+	<title> Template String</title>
+
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+	// Constantes ou const são variáveis que não sofrem alterações de valor ou hoisting de escopo, sendo seguras pra armazenar links e senhas de algumas coisas. O Java Script não permite essa mutação de "const". 
+
+
+		// let nome = 'Tiago'
+
+		// console.log('Oi ' + nome + ', tudo bem?')
+
+		// A Template Strig vem entre sinais de crase(backticks) e esse símbolo de ${variável}, tudo que estiver entre crases ou backticks será concatenado à variável numa String sem sinais de +. Posso quebrar as linhas com Enter e ela também não perde a conexão do código.
+
+		// Então Template String é um recurso dentro de uma String abrir uma janela pro processador do Java Script interpretar toda codificação inserida entre as chaves.O resultado da codificação é concatenado com as Strings do contexto em que as {} estão no meio, sem sinais de + (concatenação). É uma forma de enxugar os códigos com menos informações.
+
+
+		// console.log(`Oi ${nome}, tudo bem?`)
+
+		// console.log(`7 + 7 =  ${7+7}.`)
+
+		function calcular(x, y){
+			return x * y
+
+		}
+
+		console.log(`A multiplicação entre 8 * 8 é: ${calcular(8,8)}`)
+
+
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>
+

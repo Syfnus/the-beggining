@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title> Orientação à Objetos  - Pilar do Encapsulamento</title>
+
+	
+	<!-- Load Babel -->
+	<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+
+// O Encapsulamento é uma forma de dar visibilidade para atributos e métodos de acordo com as nossas necessidades.Quando os atributos e métodos são privados, há uma camada de segurança maior para ser rompida para acessar esses itens do objeto.
+
+	class Tv {
+	constructor() {
+		this._relacaoCanais = Array(2, 4, 5, 7, 10)
+		this._canalAtivo = 5
+		this._volume = 5		
+	} 
+
+	// getters setters - Quando eu ponho um Underline no nome de um atributo assim: _canalAtivo, ele se torna privado, eu não consigo acessá-lo de fora do objeto com o console.log(tv._canalAtivo), então eu uso o Get, que é uma pseudo função que força esse acesso ao atributo.
+	 e 
+
+	// Getter retornará o valor desse atributo
+	get canalAtivo(){
+		return this._canalAtivo
+	}
+	
+	// Setter será aplicado na Modificação desse atributo e estabelece uma lógica para que a mudança seja segura
+
+	set canalAtivo(canal){
+		//indexOf retornará o índice do Array onde o canal será encontrado e retornará sua posição no Array.
+
+		if(this._relacaoCanais.indexOf(canal) !== -1){
+		this._canalAtivo = canal
+		}
+	}
+	}
+
+	// Modificação da class Tv	
+
+	let tv = new Tv()
+	tv.canalAtivo = 10 // Se eu botar aqui algum canal inexistente no Array retornará -1 porque o canal não existe.
+	console.log(tv.canalAtivo)
+
+	</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+	</html>
